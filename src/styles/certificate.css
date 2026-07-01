@@ -1,0 +1,123 @@
+.certificate {
+  width: min(100%, 480px);
+  background: var(--cert-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow), 0 0 0 1px rgba(212, 98, 58, 0.15);
+}
+
+.certificate__border-top,
+.certificate__border-bottom {
+  height: 28px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--cert-accent) 0px,
+    var(--cert-accent) 8px,
+    var(--coral-light) 8px,
+    var(--coral-light) 16px
+  );
+  opacity: 0.85;
+  mask-image: radial-gradient(circle at 8px center, black 6px, transparent 6px);
+  mask-size: 16px 100%;
+}
+
+.certificate__inner {
+  padding: 2rem 1.75rem 1.5rem;
+  text-align: center;
+}
+
+.certificate__logo {
+  font-size: 2rem;
+  color: var(--cert-accent);
+  margin-bottom: 0.25rem;
+}
+
+.certificate__brand {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #2c1810;
+}
+
+.certificate__subbrand {
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.certificate__title {
+  font-family: var(--font-script);
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  color: var(--cert-accent);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.certificate__package {
+  font-family: var(--font-script);
+  font-size: 1.15rem;
+  color: var(--cert-accent);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.certificate__package-label {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.certificate__message {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--cert-accent);
+  margin: 1.25rem 0;
+  padding: 0.75rem 0;
+  border-top: 1px dotted rgba(196, 92, 62, 0.4);
+  border-bottom: 1px dotted rgba(196, 92, 62, 0.4);
+  line-height: 1.5;
+}
+
+.certificate__meta {
+  font-family: var(--font-script);
+  font-size: 1.1rem;
+  color: var(--cert-accent);
+  margin-bottom: 0.75rem;
+}
+
+.certificate__meta p + p {
+  margin-top: 0.15rem;
+}
+
+.certificate__note {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.certificate__footer {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.certificate__footer a {
+  color: var(--cert-accent);
+  text-decoration: none;
+}
+
+.certificate__footer a:hover {
+  text-decoration: underline;
+}
+
+.certificate-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}

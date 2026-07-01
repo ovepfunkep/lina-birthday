@@ -1,0 +1,160 @@
+.hero {
+  text-align: center;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: float-cloud 20s ease-in-out infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.cloud-1 {
+  width: 180px;
+  height: 60px;
+  top: 12%;
+  left: 8%;
+  animation-delay: 0s;
+}
+
+.cloud-1::before {
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  left: 20px;
+}
+
+.cloud-1::after {
+  width: 100px;
+  height: 70px;
+  top: -30px;
+  right: 10px;
+}
+
+.cloud-2 {
+  width: 140px;
+  height: 50px;
+  top: 22%;
+  right: 10%;
+  animation-delay: -7s;
+}
+
+.cloud-2::before {
+  width: 70px;
+  height: 70px;
+  top: -35px;
+  left: 15px;
+}
+
+.cloud-3 {
+  width: 200px;
+  height: 65px;
+  bottom: 18%;
+  left: 15%;
+  animation-delay: -14s;
+}
+
+.cloud-3::before {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  left: 30px;
+}
+
+@keyframes float-cloud {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(30px) translateY(-15px);
+  }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  animation: hero-fade-in 1.2s ease forwards;
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__eyebrow {
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.hero__title span {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 1.15em;
+  color: var(--sky-deep);
+}
+
+.hero__age {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero__age-number {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 15vw, 7rem);
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--sky-deep), #3d7ab5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__age-label {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+}
+
+.hero__cta {
+  animation: pulse-btn 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-btn {
+  0%,
+  100% {
+    box-shadow: 0 8px 24px rgba(91, 164, 217, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 40px rgba(91, 164, 217, 0.65);
+  }
+}

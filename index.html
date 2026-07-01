@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>С Днём Рождения, Лина!</title>
+    <meta name="description" content="Поздравление с 23-летием — 4 июля 2026" />
+    <meta property="og:title" content="С Днём Рождения, Лина!" />
+    <meta property="og:description" content="Особенный подарок для особенного человека — 23 года!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/lina-birthday/images/og-preview.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="section hero">
+        <div class="cloud cloud-1" aria-hidden="true"></div>
+        <div class="cloud cloud-2" aria-hidden="true"></div>
+        <div class="cloud cloud-3" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">4 июля 2026</p>
+          <h1 class="hero__title">С Днём Рождения,<br /><span>Лина!</span></h1>
+          <div class="hero__age">
+            <span class="hero__age-number" data-target="23">0</span>
+            <span class="hero__age-label">года</span>
+          </div>
+          <button type="button" class="btn btn-primary hero__cta" data-scroll="#letter">
+            Открыть поздравление ↓
+          </button>
+        </div>
+      </section>
+
+      <!-- Letter -->
+      <section id="letter" class="section letter">
+        <h2 class="section-title">Письмо для тебя</h2>
+        <p class="section-subtitle">Нажми на конверт</p>
+        <div class="envelope-scene" id="envelope-scene">
+          <div class="envelope-visual" id="envelope" role="button" tabindex="0" aria-label="Открыть письмо">
+            <div class="envelope-visual__body"></div>
+            <div class="envelope-visual__flap"></div>
+            <div class="envelope-visual__seal"><span>Л</span></div>
+          </div>
+          <article class="letter-paper" id="letter-paper" aria-hidden="true">
+            <p class="letter-greeting">Дорогая Лина,</p>
+            <p>
+              Можно долго перечислять твои хорошие качества, какая ты заботливая, ответственная,
+              настойчивая, усердная, но я знаю, что у тебя нет времени на все эти прелюдия, поэтому
+              буду краток.
+            </p>
+            <p>
+              Ты прекрасная подруга и я рад, что мы с тобой общаемся. Я рад, что ты терпишь мою
+              припиздинку и относишься к ней с пониманием. Что не осуждаешь и всегда готова помочь.
+              Что регулярно выпускаешь новые выпуски подкастов. Что посвящаешь меня во все детали
+              отраслей в которых я ничего не понимаю, как свадьба, дети, ремонт и тд.
+            </p>
+            <p>
+              Нам повезло, что в нашей жизни есть такой человек как ты, пусть так будет всегда!
+              Пусть ты и твои близкие будут здоровы, пусть Лёшка растёт и развивается вперёд
+              паровоза и никогда тебя не расстраивает, в общем, будь счастлива!
+            </p>
+            <p class="letter-closing">Поздравляем с твоим 23х летием,</p>
+            <p class="letter-sign">С любовью, твои друзья<br /><strong>Ваня и Соня</strong></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery" class="section gallery">
+        <h2 class="section-title">Наши воспоминания</h2>
+        <div class="swiper gallery-swiper">
+          <div class="swiper-wrapper" id="gallery-slides"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <!-- Gift -->
+      <section id="gift" class="section gift">
+        <h2 class="section-title">Твой подарок</h2>
+        <p class="section-subtitle gift__hint" id="gift-hint">Нажми, чтобы открыть подарок</p>
+        <div class="gift-scene" id="gift-scene">
+          <div class="gift-box" id="gift-box" role="button" tabindex="0" aria-label="Открыть подарок">
+            <div class="gift-box__lid">
+              <div class="gift-box__bow"></div>
+            </div>
+            <div class="gift-box__body">
+              <div class="gift-box__ribbon-v"></div>
+              <div class="gift-box__ribbon-h"></div>
+            </div>
+            <div class="gift-box__glow"></div>
+          </div>
+          <div class="certificate-reveal" id="certificate-reveal" hidden>
+            <div class="certificate" id="certificate">
+              <div class="certificate__border-top" aria-hidden="true"></div>
+              <div class="certificate__inner">
+                <div class="certificate__logo" aria-hidden="true">✦</div>
+                <h3 class="certificate__brand">ТАЛИСМАН</h3>
+                <p class="certificate__subbrand">WELLNESS-ЦЕНТР</p>
+                <p class="certificate__title">Подарочный сертификат</p>
+                <div class="certificate__package">
+                  <p class="certificate__package-label">SPA-пакет:</p>
+                  <p>SPA-капсула, экспресс уход по лицу,<br />массаж общий 60 мин</p>
+                </div>
+                <blockquote class="certificate__message">
+                  «Пусть о тебе позаботятся также хорошо, как ты заботишься о своих близких, Лина :)»
+                </blockquote>
+                <div class="certificate__meta">
+                  <p>Сертификат № 2650</p>
+                  <p>действителен до 01.10.2026</p>
+                </div>
+              </div>
+              <div class="certificate__border-bottom" aria-hidden="true"></div>
+            </div>
+            <div class="certificate-actions">
+              <button type="button" class="btn btn-secondary" id="save-certificate">Сохранить сертификат</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>С любовью · Ваня и Соня · 2026</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
