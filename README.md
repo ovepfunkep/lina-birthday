@@ -30,25 +30,21 @@ npm run dev
 
 ## Деплой на GitHub Pages
 
-1. Создайте репозиторий на GitHub с именем **`lina-birthday`** (или измените `base` в `vite.config.js` под своё имя).
+1. Запушьте код в ветку `main` — GitHub Actions соберёт сайт и выложит его в ветку `gh-pages`.
 
-2. Запушьте код:
+2. В репозитории откройте **Settings → Pages** и настройте:
+   - **Source:** Deploy from a branch
+   - **Branch:** `gh-pages` → `/ (root)`
 
-```bash
-git add .
-git commit -m "Birthday landing for Lina"
-git branch -M main
-git remote add origin https://github.com/<ваш-username>/lina-birthday.git
-git push -u origin main
-```
+   > Важно: не выбирайте ветку `main` — там исходники без стилей. Нужна именно `gh-pages` со сборкой.
 
-3. В репозитории: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-
-4. После успешного workflow сайт будет доступен по адресу:
+3. Подождите 1–2 минуты после пуша. Сайт будет доступен по адресу:
 
 ```
 https://<ваш-username>.github.io/lina-birthday/
 ```
+
+Если стили не появились — проверьте, что в Settings → Pages выбрана ветка **gh-pages**, не main.
 
 ## Структура сайта
 
